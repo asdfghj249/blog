@@ -22,6 +22,7 @@ public class LogAspect {
 
     @Before("log()")
     public void doBefore(JoinPoint joinPoint){
+        //test1
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         String url = request.getRequestURL().toString();
